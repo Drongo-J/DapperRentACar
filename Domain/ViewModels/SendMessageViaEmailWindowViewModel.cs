@@ -41,6 +41,7 @@ namespace DapperRentACar.Domain.ViewModels
                     {
                         EmailService.SendEmail(toEmail, "Email from RH Car Dealership | Rent A Car", Message);
                     });
+                    emailThread.Start();
                     CloseCommand.Execute(null);
                     MessageBox.Show($"Mail was sent successfully!", "Message was sent");
                 }
