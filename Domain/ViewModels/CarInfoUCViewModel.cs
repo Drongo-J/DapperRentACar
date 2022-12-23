@@ -67,14 +67,16 @@ namespace DapperRentACar.Domain.ViewModels
                     App.Rectangle.Visibility = Visibility.Visible;
                     App.ChildWindow.ShowDialog();
                 }
-
-                var rentCarWindow = new RentCarWindow();
-                var rentCarWindowVM = new RentCarWindowViewModel(Car);
-                rentCarWindow.DataContext = rentCarWindowVM;
-                App.ChildWindow = rentCarWindow;
-                App.ChildWindow.Owner = App.Current.MainWindow;
-                App.Rectangle.Visibility = Visibility.Visible;
-                App.ChildWindow.ShowDialog();
+                if (App.CurrentClient != null)
+                {
+                    var rentCarWindow = new RentCarWindow();
+                    var rentCarWindowVM = new RentCarWindowViewModel(Car);
+                    rentCarWindow.DataContext = rentCarWindowVM;
+                    App.ChildWindow = rentCarWindow;
+                    App.ChildWindow.Owner = App.Current.MainWindow;
+                    App.Rectangle.Visibility = Visibility.Visible;
+                    App.ChildWindow.ShowDialog();
+                }
             });
         }
     }

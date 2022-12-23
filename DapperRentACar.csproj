@@ -92,6 +92,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Domain\Views\UserControls\RentUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Domain\Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -127,6 +131,7 @@
     <Compile Include="Domain\ViewModels\HomePageUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\CarInfoUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\RentCarWindowViewModel.cs" />
+    <Compile Include="Domain\ViewModels\RentUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\SecurityWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignInWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignUpWindowViewModel.cs" />
@@ -144,6 +149,9 @@
     </Compile>
     <Compile Include="Domain\Views\UserControls\HomePageUC.xaml.cs">
       <DependentUpon>HomePageUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\UserControls\RentUC.xaml.cs">
+      <DependentUpon>RentUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

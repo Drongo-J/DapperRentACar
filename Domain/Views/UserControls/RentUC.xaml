@@ -5,8 +5,93 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DapperRentACar.Domain.Views.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             Height="450"
+             Width="320"
+             Margin="20,10,20,0"
+             d:DesignWidth="320">
+    <Border BorderThickness="4"
+            BorderBrush="{Binding BorderColor}"
+            CornerRadius="2"
+            Background="White"
+            Padding="10">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Style.Triggers>
+                    <Trigger Property="Border.IsMouseOver" Value="True">
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Black"  Opacity="0.5" BlurRadius="2" RenderingBias="Performance"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Image Stretch="UniformToFill"
+                       x:Name="Image" Margin="0,0,0,-42">
+
+                </Image>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <TextBlock Text="{Binding Client.Username}"
+                           FontSize="20"
+                           FontWeight="ExtraBold"
+                           Foreground="Black"
+                           Margin="10,0,0,0"
+                           FontFamily="Cascadia Code SemiBold}">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <TextBlock Text="{Binding Client.Email}"
+                           Margin="10,0,0,0"
+                           Foreground="Black"
+                           FontSize="20"
+                           FontFamily="Cascadia Code SemiLight}" Grid.ColumnSpan="2">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <TextBlock Text="{Binding RentStartDate}"
+                           Margin="10,0,0,0"
+                           Foreground="Black"
+                           FontSize="20"
+                           FontFamily="Cascadia Code SemiLight}">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <TextBlock Text="{Binding RentEndDate}"
+                           Margin="10,0,0,0"
+                           FontSize="20"
+                           Foreground="Black"
+                           FontFamily="Cascadia Code SemiLight}">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="6">
+                <Button Command="{Binding SendEmail}"
+                        Style="{StaticResource MyButtonStyle2}"
+                        Content="Send Email">
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
 </UserControl>
+    

@@ -43,7 +43,7 @@ namespace DapperRentACar.DataAccess.Concretes
                 var sql = "SELECT * FROM Admins " +
                           "WHERE Id=@adminId";
 
-                return connection.QuerySingleOrDefault(sql, new { adminId = id});
+                return connection.QuerySingleOrDefault<Admin>(sql, new { adminId = id});
             }
         }
 
