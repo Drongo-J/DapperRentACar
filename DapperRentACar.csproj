@@ -70,6 +70,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Domain\Views\UserControls\CarInfoUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Domain\Views\UserControls\CarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,6 +83,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Domain\Views\UserControls\HomePageUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Domain\Views\UserControls\RentCarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,16 +117,20 @@
     <Compile Include="Domain\Commands\RelayCommand.cs" />
     <Compile Include="Domain\Helpers\Constants.cs" />
     <Compile Include="Domain\Helpers\Enums.cs" />
-    <Compile Include="Domain\Helpers\FileHelpers.cs" />
     <Compile Include="Domain\ViewModels\AdminPageUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\CarUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\ClientPageUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\HomePageUCViewModel.cs" />
+    <Compile Include="Domain\ViewModels\CarInfoUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\RentCarUCViewModel.cs" />
+    <Compile Include="Domain\ViewModels\SignInWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignUpWindowViewModel.cs" />
     <Compile Include="Domain\Views\UserControls\AdminPageUC.xaml.cs">
       <DependentUpon>AdminPageUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\UserControls\CarInfoUC.xaml.cs">
+      <DependentUpon>CarInfoUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Views\UserControls\CarUC.xaml.cs">
       <DependentUpon>CarUC.xaml</DependentUpon>
@@ -129,15 +141,14 @@
     <Compile Include="Domain\Views\UserControls\HomePageUC.xaml.cs">
       <DependentUpon>HomePageUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Views\UserControls\RentCarUC.xaml.cs">
+      <DependentUpon>RentCarUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Domain\Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Domain\Views\UserControls\NoResultUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Domain\Views\UserControls\RentCarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,9 +164,6 @@
   <ItemGroup>
     <Compile Include="Domain\Views\UserControls\NoResultUC.xaml.cs">
       <DependentUpon>NoResultUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Domain\Views\UserControls\RentCarUC.xaml.cs">
-      <DependentUpon>RentCarUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Views\Windows\SignInWindow.xaml.cs">
       <DependentUpon>SignInWindow.xaml</DependentUpon>
@@ -196,9 +204,6 @@
     <Resource Include="Domain\Assets\rh_icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Domain\Assets\rentAcar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Domain\Assets\rh_icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -208,9 +213,7 @@
     <Resource Include="Domain\Assets\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Domain\Files\HasSignedUp.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Domain\Assets\rentAcar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

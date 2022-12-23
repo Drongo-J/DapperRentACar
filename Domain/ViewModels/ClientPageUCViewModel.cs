@@ -3,6 +3,7 @@ using DapperRentACar.DataAccess.Entitites;
 using DapperRentACar.Domain.Commands;
 using DapperRentACar.Domain.Helpers;
 using DapperRentACar.Domain.Views;
+using DapperRentACar.Domain.Views.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -260,13 +261,13 @@ namespace DapperRentACar.Domain.ViewModels
             {
                 if (SelectedCar != null)
                 {
-                    var rentCarUC = new RentCarUC();
+                    var carInfo = new CarInfoUC();
                     var car = ((SelectedCar as CarUC).DataContext as CarUCViewModel).Car;
-                    rentCarUC.Image.Source = new BitmapImage(new Uri(car.ImagePath));
-                    var rentCarUCVM = new RentCarUCViewModel(car);
-                    rentCarUC.DataContext = rentCarUCVM;
-                    App.Rectangle = rentCarUC.Rectangle;
-                    App.ChangePage(rentCarUC);
+                    carInfo.Image.Source = new BitmapImage(new Uri(car.ImagePath));
+                    var rentCarUCVM = new CarInfoUCViewModel(car);
+                    carInfo.DataContext = rentCarUCVM;
+                    App.Rectangle = carInfo.Rectangle;
+                    App.ChangePage(carInfo);
                     SelectedCar = null;
                 }
             });

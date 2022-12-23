@@ -16,11 +16,11 @@ namespace DapperRentACar.DataAccess.Concretes
         {
             using (var connection = new SqlConnection(App.ConnectionString))
             {
-                var sql = @"INSERT INTO Clients([Username],[Password]) " +
-                           "VALUES (@username, @password)";
+                var sql = @"INSERT INTO Clients([Email],[Username],[Password]) " +
+                                         "VALUES (@email, @username, @password)";
 
-                connection.Execute(sql, new { username = entity.Username, password = entity.Password });
-            }   
+                connection.Execute(sql, new { email = entity.Email, username = entity.Username, password = entity.Password });
+            }
         }
 
         public void Delete(Client data)
@@ -60,12 +60,13 @@ namespace DapperRentACar.DataAccess.Concretes
         {
             using (var connection = new SqlConnection(App.ConnectionString))
             {
-                var sql = "UPDATE Clients " +
+                var sql = "UPDATE Admins " +
                           "SET " +
+                          "Email = @email, " +
                           "Username = @username, " +
                           "Password = @password " +
                           "WHERE Id=@id";
-                connection.Execute(sql, new { id = entity.Id, username = entity.Username, password = entity.Password });
+                connection.Execute(sql, new { id = entity.Id, email = entity.Email, username = entity.Username, password = entity.Password });
             }
         }
     }

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DapperRentACar.Domain.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for RentCarUC.xaml
+    /// Interaction logic for CarInfoUC.xaml
     /// </summary>
-    public partial class RentCarUC : UserControl
+    public partial class CarInfoUC : UserControl
     {
-        public RentCarUC()
+        public CarInfoUC()
         {
             InitializeComponent();
         }

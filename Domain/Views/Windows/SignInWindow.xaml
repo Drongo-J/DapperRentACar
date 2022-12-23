@@ -5,8 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DapperRentACar.Domain.Views.Windows"
         mc:Ignorable="d"
-        Title="SignInWindow" Height="450" Width="800">
+        Title="SignInWindow"    
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Height="340"    
+        Width="350"
+        d:DesignWidth="350">
     <Grid>
-        
+        <Border CornerRadius="10"
+            Padding="3" 
+            BorderThickness="3"
+            Background="White" >
+            <StackPanel>
+                <Canvas>
+                    <Button Width="30"
+                            Height="30"
+                            Canvas.Top="0"
+                            Canvas.Right="0"
+                            Cursor="Hand"
+                            Command="{Binding CloseCommand}">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White" StrokeThickness="1" Stroke="Black"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content=""/>
+                                    <Image Source="\Domain\Assets\close.png"></Image>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Canvas>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Width="103"
+                       Margin="20"
+                       Cursor="IBeam"
+                       FontSize="24"
+                       Text="Sign In">
+                </TextBlock>
+
+
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                       Foreground="{Binding UsernameBorderBrush,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       HorizontalAlignment="Center"
+                       Width="65"
+                       Margin="0,0,0,0"
+                       FontSize="14"
+                       Text="Username" Height="20">
+                </TextBlock>
+
+                <TextBox Height="40"
+                         Style="{StaticResource MyTextBoxStyle}"
+                         Margin="20,0,20,0"
+                         FontSize="17"
+                         Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Padding="10,8,10,0">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                           Width="310"
+                           Foreground="{Binding UsernameWarningColor}"
+                           Margin="0,3,0,0"
+                           TextAlignment="Center"
+                           FontSize="14"
+                           Text="{Binding UsernameWarning}" Height="16">
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Width="66"
+                       Margin="0,5,0,0"
+                       FontSize="14"
+                       Text="Password" Height="20">
+                </TextBlock>
+
+                <PasswordBox Height="40"
+                             Style="{StaticResource MyPasswordBoxStyle}"
+                             Margin="20,0,20,0"
+                             Name="PasswordBox"
+                             FontSize="17"
+                             Padding="10,8,10,0">
+                </PasswordBox>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                           Width="310"
+                           Foreground="{Binding PasswordWarningColor}"
+                           Margin="0,3,0,0"
+                           TextAlignment="Center"
+                           FontSize="14"
+                           Text="{Binding PasswordWarning}" Height="16">
+                </TextBlock>
+
+                <Button Style="{StaticResource MyButtonStyle2}"
+                        Background="{StaticResource MainColor}"
+                        Margin="20,20,20,0" 
+                        Width="298" 
+                        Height="40"
+                        Content="Sign In"
+                        Command="{Binding SignInCommand}">
+                </Button>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}" 
+                           Width="265"
+                           Margin="0,8,0,0"
+                           TextAlignment="Center"
+                           FontSize="14"
+                           Cursor="Hand"
+                           Text="Don't have an account? Sign up" Height="16">
+                    <TextBlock.InputBindings>
+                        <MouseBinding Gesture="LeftClick" Command="{Binding SignUpCommand}"></MouseBinding>
+                    </TextBlock.InputBindings>
+                </TextBlock>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

@@ -26,7 +26,6 @@ C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debu
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\HomePageUC.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\MainWindow.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\NoResultUC.g.cs
-C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\RentCarUC.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SignInWindow.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SignUpWindow.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\AdminPageUC.baml
@@ -35,6 +34,7 @@ C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debu
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\HomePageUC.baml
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\MainWindow.baml
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\NoResultUC.baml
-C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\RentCarUC.baml
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SignInWindow.baml
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SignUpWindow.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\CarInfoUC.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\CarInfoUC.baml

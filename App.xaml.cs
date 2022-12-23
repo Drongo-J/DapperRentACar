@@ -1,4 +1,5 @@
 ﻿using DapperRentACar.DataAccess.Concretes;
+using DapperRentACar.DataAccess.Entitites;
 using DapperRentACar.Domain.Helpers;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,11 @@ namespace DapperRentACar
 
         public static Rectangle Rectangle { get; internal set; }
 
+        public static Client CurrentClient { get; internal set; }
+
         public App()
         {
+            CurrentClient = null;
             ConnectionString = ConfigurationManager.ConnectionStrings["MyConnString"].ConnectionString;
             Database = new UnitOfWork();
         }
