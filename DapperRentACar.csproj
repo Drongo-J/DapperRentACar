@@ -133,6 +133,7 @@
     <Compile Include="Domain\ViewModels\RentCarWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\RentUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\SecurityWindowViewModel.cs" />
+    <Compile Include="Domain\ViewModels\SendMessageViaEmailWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignInWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignUpWindowViewModel.cs" />
     <Compile Include="Domain\Views\UserControls\AdminPageUC.xaml.cs">
@@ -169,6 +170,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Domain\Views\Windows\SendMessageViaEmailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Domain\Views\Windows\SignInWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,6 +192,9 @@
     </Compile>
     <Compile Include="Domain\Views\Windows\SecurityWindow.xaml.cs">
       <DependentUpon>SecurityWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\Windows\SendMessageViaEmailWindow.xaml.cs">
+      <DependentUpon>SendMessageViaEmailWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Views\Windows\SignInWindow.xaml.cs">
       <DependentUpon>SignInWindow.xaml</DependentUpon>
@@ -236,7 +244,7 @@
     <Resource Include="Domain\Assets\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Domain\Assets\rentAcar.png" />
+    <Resource Include="Domain\Assets\test2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

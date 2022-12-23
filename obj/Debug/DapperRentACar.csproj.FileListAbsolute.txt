@@ -48,3 +48,5 @@ C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debu
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SecurityWindow.baml
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\RentUC.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\RentUC.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SendMessageViaEmailWindow.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SendMessageViaEmailWindow.baml

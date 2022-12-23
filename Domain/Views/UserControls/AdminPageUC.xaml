@@ -61,5 +61,10 @@
                 </ListView.ItemsPanel>
             </ListView>
         </Grid>
+
+
+        <Rectangle x:Name="Rectangle" Visibility="Hidden" Fill="Black" Opacity="0.80" IsHitTestVisible="False" Margin="0,0,0,5" Grid.RowSpan="3">
+
+        </Rectangle>
     </Grid>
 </UserControl>

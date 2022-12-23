@@ -21,6 +21,7 @@ namespace DapperRentACar.Domain.ViewModels
                 var adminPageUC = new AdminPageUC();
                 var adminPageUCVM = new AdminPageUCViewModel();
                 adminPageUC.DataContext = adminPageUCVM;
+                App.Rectangle = adminPageUC.Rectangle;
                 App.ChangePage(adminPageUC);
             });
 

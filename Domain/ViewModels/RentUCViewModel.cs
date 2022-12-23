@@ -1,6 +1,7 @@
 ﻿using DapperRentACar.DataAccess.Entitites;
 using DapperRentACar.Domain.Commands;
 using DapperRentACar.Domain.Views.UserControls;
+using DapperRentACar.Domain.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -48,8 +49,18 @@ namespace DapperRentACar.Domain.ViewModels
             else
             {
                 BorderColor = Brushes.Red;
-
             }
+
+            SendEmail = new RelayCommand((s) => 
+            {
+                var sendMessageViaEmailWindow = new SendMessageViaEmailWindow();
+                var sendMessageViaEmailWindowVM = new SendMessageViaEmailWindowViewModel(Client.Email);
+                sendMessageViaEmailWindow.DataContext = sendMessageViaEmailWindowVM;
+                App.ChildWindow = sendMessageViaEmailWindow;
+                App.ChildWindow.Owner = App.Current.MainWindow;
+                App.Rectangle.Visibility = Visibility.Visible;
+                App.ChildWindow.ShowDialog();
+            });
         }
 
     }
