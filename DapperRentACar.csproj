@@ -38,12 +38,18 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -86,10 +92,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Domain\Views\UserControls\RentCarUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Domain\Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,13 +119,15 @@
     <Compile Include="Domain\Commands\RelayCommand.cs" />
     <Compile Include="Domain\Helpers\Constants.cs" />
     <Compile Include="Domain\Helpers\Enums.cs" />
+    <Compile Include="Domain\Services\EmailService.cs" />
     <Compile Include="Domain\ViewModels\AdminPageUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\CarUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\ClientPageUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\HomePageUCViewModel.cs" />
     <Compile Include="Domain\ViewModels\CarInfoUCViewModel.cs" />
-    <Compile Include="Domain\ViewModels\RentCarUCViewModel.cs" />
+    <Compile Include="Domain\ViewModels\RentCarWindowViewModel.cs" />
+    <Compile Include="Domain\ViewModels\SecurityWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignInWindowViewModel.cs" />
     <Compile Include="Domain\ViewModels\SignUpWindowViewModel.cs" />
     <Compile Include="Domain\Views\UserControls\AdminPageUC.xaml.cs">
@@ -141,14 +145,19 @@
     <Compile Include="Domain\Views\UserControls\HomePageUC.xaml.cs">
       <DependentUpon>HomePageUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Domain\Views\UserControls\RentCarUC.xaml.cs">
-      <DependentUpon>RentCarUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Domain\Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Domain\Views\UserControls\NoResultUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Domain\Views\Windows\RentCarWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Domain\Views\Windows\SecurityWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,6 +173,12 @@
   <ItemGroup>
     <Compile Include="Domain\Views\UserControls\NoResultUC.xaml.cs">
       <DependentUpon>NoResultUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\Windows\RentCarWindow.xaml.cs">
+      <DependentUpon>RentCarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\Windows\SecurityWindow.xaml.cs">
+      <DependentUpon>SecurityWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Views\Windows\SignInWindow.xaml.cs">
       <DependentUpon>SignInWindow.xaml</DependentUpon>

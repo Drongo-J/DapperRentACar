@@ -34,5 +34,6 @@ namespace DapperRentACar.Domain.Helpers
         public static string PasswordLengthError = "Password length must be 8 or greater!";
         public static string UsernameLengthError = "Username length must be 3 or greater!";
         public static string IncorrectEmailError = "Please, enter valid e-mail!";
+        public static string EmailSubject = "Security Code";
     }
 }

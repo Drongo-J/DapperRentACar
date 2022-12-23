@@ -195,13 +195,10 @@ namespace DapperRentACar.Domain.ViewModels
                 }; 
 
                 App.Database.ClientRepository.Add(client);
+                MessageBox.Show($"You successfully signed up!", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 App.CurrentClient = App.Database.ClientRepository.GetAll().Where(c => c.Email == this.Email).First();
-                
-                // successfull sign up
 
-                // how many days rent
-                
-                // add database
+                CloseCommand.Execute(this);
             });
         }
     }

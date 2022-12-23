@@ -129,9 +129,7 @@ namespace DapperRentACar.Domain.ViewModels
                 MessageBox.Show($"Welcome {client.Username}!", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 App.CurrentClient = client;
 
-                // successfull sign in
-
-                // how many days rent
+                CloseCommand.Execute(client);
             });
         }
     }

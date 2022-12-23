@@ -58,11 +58,6 @@ namespace DapperRentACar.Domain.ViewModels
             {
                 if (App.CurrentClient == null)
                 {
-                    // sign in
-
-                    // else
-                    // sign up
-
                     var signUpWindow = new SignUpWindow();
                     var signUpWindowVM = new SignUpWindowViewModel();
                     signUpWindow.DataContext = signUpWindowVM;
@@ -72,6 +67,14 @@ namespace DapperRentACar.Domain.ViewModels
                     App.Rectangle.Visibility = Visibility.Visible;
                     App.ChildWindow.ShowDialog();
                 }
+
+                var rentCarWindow = new RentCarWindow();
+                var rentCarWindowVM = new RentCarWindowViewModel(Car);
+                rentCarWindow.DataContext = rentCarWindowVM;
+                App.ChildWindow = rentCarWindow;
+                App.ChildWindow.Owner = App.Current.MainWindow;
+                App.Rectangle.Visibility = Visibility.Visible;
+                App.ChildWindow.ShowDialog();
             });
         }
     }

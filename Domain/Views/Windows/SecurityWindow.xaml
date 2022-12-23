@@ -1,0 +1,88 @@
+﻿<Window x:Class="DapperRentACar.Domain.Views.Windows.SecurityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DapperRentACar.Domain.Views.Windows"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        mc:Ignorable="d"
+        Title="SecurityWindow"        
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Height="340"    
+        Width="350"
+        d:DesignWidth="350">
+    <Grid Background="White">
+        <Border CornerRadius="10"
+            Padding="3" 
+            BorderThickness="3"
+            Background="White" >
+            <StackPanel>
+                <Canvas>
+                    <Button Width="30"
+                            Height="30"
+                            Canvas.Top="0"
+                            Canvas.Right="0"
+                            Cursor="Hand"
+                            Command="{Binding CloseCommand}">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White" StrokeThickness="1" Stroke="Black"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content=""/>
+                                    <Image Source="\Domain\Assets\close.png"></Image>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Canvas>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="Verification Code" 
+                       Width="306"
+                       Height="54"
+                       FontSize="30"
+                       Margin="0,40,0,0"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center">
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle}"
+                       Text="Please, type the verification code sent to your email." 
+                       Width="306"
+                       Height="70"
+                       Margin="0,0,0,20"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center">
+                </TextBlock>
+
+                <TextBox Height="40"
+                         Style="{StaticResource MyTextBoxStyle}"
+                         Margin="20,0,20,0"
+                         MaxLength="6"
+                         FontSize="17"
+                         Text="{Binding VerificationCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Padding="10,8,10,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewTextInput" >
+                            <ei:CallMethodAction TargetObject="{Binding}" MethodName="IsAllowedInput"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+
+                <Button Style="{StaticResource MyButtonStyle2}"
+                        Background="{StaticResource MainColor}"
+                        Margin="20,50,20,0" 
+                        Width="298" 
+                        Height="40"
+                        Content="Confirm"
+                        Command="{Binding ConfirmCommand}">
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\App.xaml
-11-991175536
+12593930113
 
-43-232427393
-16-1879878551
-Domain\Dictionaries\Dictionary.xaml;Domain\Views\UserControls\AdminPageUC.xaml;Domain\Views\UserControls\CarInfoUC.xaml;Domain\Views\UserControls\CarUC.xaml;Domain\Views\UserControls\ClientPageUC.xaml;Domain\Views\UserControls\HomePageUC.xaml;Domain\Views\UserControls\RentCarUC.xaml;Domain\Views\Windows\MainWindow.xaml;Domain\Views\UserControls\NoResultUC.xaml;Domain\Views\Windows\SignInWindow.xaml;Domain\Views\Windows\SignUpWindow.xaml;
+45739249020
+18-1999150441
+Domain\Dictionaries\Dictionary.xaml;Domain\Views\UserControls\AdminPageUC.xaml;Domain\Views\UserControls\CarInfoUC.xaml;Domain\Views\UserControls\CarUC.xaml;Domain\Views\UserControls\ClientPageUC.xaml;Domain\Views\UserControls\HomePageUC.xaml;Domain\Views\Windows\MainWindow.xaml;Domain\Views\UserControls\NoResultUC.xaml;Domain\Views\Windows\RentCarWindow.xaml;Domain\Views\Windows\SecurityWindow.xaml;Domain\Views\Windows\SignInWindow.xaml;Domain\Views\Windows\SignUpWindow.xaml;
 
-True
+False
 

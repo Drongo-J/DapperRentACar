@@ -10,6 +10,10 @@
 //------------------------------------------------------------------------------
 
 using DapperRentACar.Domain.Views.Windows;
+using Microsoft.Expression.Interactivity.Core;
+using Microsoft.Expression.Interactivity.Input;
+using Microsoft.Expression.Interactivity.Layout;
+using Microsoft.Expression.Interactivity.Media;
 using Microsoft.Xaml.Behaviors;
 using Microsoft.Xaml.Behaviors.Core;
 using Microsoft.Xaml.Behaviors.Input;
@@ -25,6 +29,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Ink;
 using System.Windows.Input;
+using System.Windows.Interactivity;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Animation;

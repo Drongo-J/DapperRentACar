@@ -38,3 +38,11 @@ C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debu
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SignUpWindow.baml
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\CarInfoUC.g.cs
 C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\UserControls\CarInfoUC.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\RentCarWindow.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\RentCarWindow.baml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SecurityWindow.g.cs
+C:\Users\Hafiz\source\repos\Visual Studio 2022 New Files\DapperRentACar\obj\Debug\Domain\Views\Windows\SecurityWindow.baml
