@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DapperRentACar.Domain.Views"
              mc:Ignorable="d" 
-    Height="400"
+             Height="400"
+             Background="{StaticResource SecondColor}"
              Width="1100">
-    <Grid Background="White">
+    <Grid Background="{StaticResource SecondColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -23,9 +24,10 @@
         <Grid Grid.Row="2">
             <TextBlock Style="{StaticResource MyTextBlockStyle}"
                        HorizontalAlignment="Left"
-                       Width="500"
+                       Width="550"
                        Margin="20,0,0,0"
                        TextAlignment="Left"
+                       Foreground="White"
                        Text="Sorry, nothing was found based on your search.">
             </TextBlock>
         </Grid>

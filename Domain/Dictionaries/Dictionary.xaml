@@ -248,7 +248,7 @@
                   Background="{StaticResource MainColor}"
                   BorderBrush="Black">
             </Border>
-            <Border 
+            <Border
                   x:Name="cbox2Border"
                   Grid.Column="0"
                   CornerRadius="10,0,0,10" 

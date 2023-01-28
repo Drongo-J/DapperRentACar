@@ -261,14 +261,21 @@ namespace DapperRentACar.Domain.ViewModels
             {
                 if (SelectedCar != null)
                 {
-                    var carInfo = new CarInfoUC();
-                    var car = ((SelectedCar as CarUC).DataContext as CarUCViewModel).Car;
-                    carInfo.Image.Source = new BitmapImage(new Uri(car.ImagePath));
-                    var rentCarUCVM = new CarInfoUCViewModel(car);
-                    carInfo.DataContext = rentCarUCVM;
-                    App.Rectangle = carInfo.Rectangle;
-                    App.ChangePage(carInfo);
-                    SelectedCar = null;
+                    try
+                    {
+                        var carInfo = new CarInfoUC();
+                        var car = ((SelectedCar as CarUC).DataContext as CarUCViewModel).Car;
+                        carInfo.Image.Source = new BitmapImage(new Uri(car.ImagePath));
+                        var rentCarUCVM = new CarInfoUCViewModel(car);
+                        carInfo.DataContext = rentCarUCVM;
+                        App.Rectangle = carInfo.Rectangle;
+                        App.ChangePage(carInfo);
+                        SelectedCar = null;
+                    }
+                    catch (Exception)
+                    {
+                        return;
+                    }
                 }
             });
         }
